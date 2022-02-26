@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const { data } = await axios.get(`${host}/movie`);
-      console.log(data);
+
       setMovies(data);
       setMinYear(
         movies
@@ -38,13 +38,14 @@ function App() {
       style={{
         padding: 10,
       }}
+      justifyContent='center'
     >
-      <Grid item xs={12}>
+      <Grid container item xs={12} justifyContent='center'>
         <Typography variant='h3' component='h1'>
           Movies
         </Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} sm={8} md={6}>
         <Paper
           style={{
             padding: 10,
@@ -63,7 +64,7 @@ function App() {
           ></YearSlider>
         </Paper>
       </Grid>
-      <Grid item xs={12}>
+      <Grid container item xs={12} justifyContent='center'>
         <CustomTable
           rows={movies}
           selectedMovie={selectedMovie}

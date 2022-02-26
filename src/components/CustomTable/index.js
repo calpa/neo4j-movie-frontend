@@ -20,7 +20,7 @@ const grey = {
   900: '#1A2027',
 };
 
-const Root = styled('div')(
+const StyledTable = styled('div')(
   ({ theme }) => `
   table {
     font-family: IBM Plex Sans, sans-serif;
@@ -136,7 +136,7 @@ export default function CustomTable(props) {
   };
 
   return (
-    <Root sx={{ width: 500, maxWidth: '100%' }}>
+    <StyledTable>
       <table aria-label='custom pagination table'>
         <thead>
           <tr>
@@ -193,6 +193,6 @@ export default function CustomTable(props) {
           </tr>
         </tfoot>
       </table>
-    </Root>
+    </StyledTable>
   );
 }
