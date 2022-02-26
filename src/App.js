@@ -23,9 +23,7 @@ function App() {
 
       setMovies(data);
       setMinYear(
-        movies
-          .map((movie) => movie.released.low)
-          .reduce((a, b) => Math.min(a, b))
+        data.map((movie) => movie.released.low).reduce((a, b) => Math.min(a, b))
       );
     }
 
