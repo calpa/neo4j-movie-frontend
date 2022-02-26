@@ -6,7 +6,7 @@ import CustomTable from './components/CustomTable';
 import CustomSelect from './components/CustomSelect';
 import YearSlider from './components/YearSlider';
 
-const host = 'http://10.0.0.183:3000';
+const host = process.env.REACT_APP_HOST;
 
 function App() {
   const [movies, setMovies] = useState([]);
